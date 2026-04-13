@@ -1,40 +1,44 @@
-* {
-    box-sizing: border-box;
+.fruit-card {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.fruit-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-nav {
-    background-color: #4CAF50;
-    color: white;
+.cta-button {
+  background: linear-gradient(90deg, #ff6b6b, #ffcc6b);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.cta-button:hover {
+  background: linear-gradient(90deg, #ffcc6b, #ff6b6b);
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+@media (max-width: 768px) {
+  .fruit-card {
+    height: auto;
+  }
 }
 
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f1f1f1;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fruit-card {
+    flex: 1;
+    height: 250px;
+  }
 }
 
-.fruit-list {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.fruit-item {
-    margin: 10px 0;
+@media (min-width: 1025px) {
+  .fruit-card {
+    height: 250px;
+  }
 }
